@@ -8,7 +8,7 @@ jobs:
     runs-on: 'ubuntu-18.04'
     steps:
       - name: 'install maven'
-        uses: 'maven:3.6-openjdk-11'
+        uses: 'docker://maven:3.6-openjdk-11'
       - name: 'install product'
         run: 'mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V'
       - name: 'test product'
