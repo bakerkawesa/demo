@@ -4,11 +4,10 @@ on: 'push'
 
 jobs:
   test:
-    name: 'test'
-    runs-on: 'ubuntu-18.04'
+    container:
+      image: 'maven:3.6-openjdk-11'
     steps:
       - name: 'before_script'
-        uses: 'docker://maven:3.6-openjdk-11'
         run: 'mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V'
       - name: 'script'
         run: 'mvn test -B'
