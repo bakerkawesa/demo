@@ -1,4 +1,4 @@
-image: 'maven:3.6-openjdk11'
+image: 'maven:3.6-openjdk-11'
 
 before_script:
   - 'mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V'
