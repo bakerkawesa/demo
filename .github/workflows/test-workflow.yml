@@ -4,6 +4,7 @@ on: 'push'
 
 jobs:
   test:
+    name: 'test'
     runs-on: 'ubuntu-18.04'
     steps:
       - name: 'install maven'
