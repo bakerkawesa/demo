@@ -8,9 +8,7 @@ jobs:
     container:
       image: 'maven:3.6-openjdk-11'
     steps:
-        uses: 'actions/checkout@v2'
-      - name: 'before_script'
-        run: 'mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V'
-      - name: 'script'
-        run: 'mvn test -B'
+      - uses: 'actions/checkout@v2'
+      - run: 'mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V'
+      - run: 'mvn test -B'
 
