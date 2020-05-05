@@ -4,6 +4,7 @@ on: 'push'
 
 jobs:
   test:
+    runs-on: 'ubuntu-latest'
     container:
       image: 'maven:3.6-openjdk-11'
     steps:
